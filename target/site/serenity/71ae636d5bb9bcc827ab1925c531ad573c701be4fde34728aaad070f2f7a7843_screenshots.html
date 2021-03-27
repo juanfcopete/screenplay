@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">learning screenplay</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="b2a296eda1f92b662eaff48a49047b3ab45343ef92ad9adbbbdf436cbe0527f3.html">Search Fly</a></span>
+                > <span class="truncate-60"><a
+                    href="71ae636d5bb9bcc827ab1925c531ad573c701be4fde34728aaad070f2f7a7843.html">Search fly </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 26-03-2021 11:53</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Search Fly </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I as a person<br />
+Want to search the most economic fly between Medellin and Bogota<br />
+To save money
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Search fly
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="cab3db7a53f2a0fc92e28a2211d581052a9a0fbc64fd188629868aa91142ffd9.png" title=" Given Cesar want to fly" width="1920"/>
+                <img src="cab3db7a53f2a0fc92e28a2211d581052a9a0fbc64fd188629868aa91142ffd9.png" title=" Cesar opens the https://www.vivaair.com/co/es" width="1920"/>
+                <img src="cab3db7a53f2a0fc92e28a2211d581052a9a0fbc64fd188629868aa91142ffd9.png" title=" Given Cesar want to fly (completed)" width="1920"/>
+                <img src="8bdb231d88e2c231678168e502cd3dc8dde658883fa7dc5d1d5fe1f89de17435.png" title=" When choose the fly Medellin - Bogota" width="1920"/>
+                <img src="8bdb231d88e2c231678168e502cd3dc8dde658883fa7dc5d1d5fe1f89de17435.png" title=" Cesar clicks on Close notifications" width="1920"/>
+                <img src="45ad20d3bda2bcfb671bca9fbc37858ec7fa8e5db91c8ba77507c32109e004ce.png" title=" Cesar clicks on Close notifications (completed)" width="1920"/>
+                <img src="45ad20d3bda2bcfb671bca9fbc37858ec7fa8e5db91c8ba77507c32109e004ce.png" title=" Cesar clicks on Solo ida check box" width="1920"/>
+                <img src="05b828d9413cd40b0a7990243b11ea5c05092b6ef30c3f628034c7e78dd9c462.png" title=" Cesar clicks on Solo ida check box (completed)" width="1920"/>
+                <img src="05b828d9413cd40b0a7990243b11ea5c05092b6ef30c3f628034c7e78dd9c462.png" title=" Cesar enters 'Medellin' into ORIGIN input" width="1920"/>
+                <img src="bee224e6fbb9b3795723659bc64d8639328bd6629b08d830dd7bba172c694cc2.png" title=" Cesar enters 'Medellin' into ORIGIN input (completed)" width="1920"/>
+                <img src="bee224e6fbb9b3795723659bc64d8639328bd6629b08d830dd7bba172c694cc2.png" title=" Cesar clicks on Select origin" width="1920"/>
+                <img src="3ec341b25e6ea801cfa250408b8173f2a8035e66370da06beb62b8ff98f1ffdf.png" title=" Cesar clicks on Select origin (completed)" width="1920"/>
+                <img src="3ec341b25e6ea801cfa250408b8173f2a8035e66370da06beb62b8ff98f1ffdf.png" title=" Cesar enters 'Bogota' into search destiny" width="1920"/>
+                <img src="18ded7426966c4ad10138907dfc3d7e61dd4e608a0d0d3b2893e5a21aff7ce10.png" title=" Cesar enters 'Bogota' into search destiny (completed)" width="1920"/>
+                <img src="18ded7426966c4ad10138907dfc3d7e61dd4e608a0d0d3b2893e5a21aff7ce10.png" title=" Cesar clicks on Select destiny" width="1920"/>
+                <img src="6400f8c961957e378e85bec296547a1b33983053c4936e53331aca813a5fd38c.png" title=" Cesar clicks on Select destiny (completed)" width="1920"/>
+                <img src="6400f8c961957e378e85bec296547a1b33983053c4936e53331aca813a5fd38c.png" title=" Cesar clicks on Date for fly" width="1920"/>
+                <img src="70edc48018f0b24b2900299f54dd6a99e8f1dd3edf76503f924683d2f2bc4c16.png" title=" Cesar clicks on Date for fly (completed)" width="1920"/>
+                <img src="70edc48018f0b24b2900299f54dd6a99e8f1dd3edf76503f924683d2f2bc4c16.png" title=" Cesar clicks on //button[@date=&quot;2021-03-27&quot;]" width="1920"/>
+                <img src="d1b01395c2f5096738b37f86e7525b944877db6a96d593a9359fc9b66237cf69.png" title=" Cesar clicks on //button[@date=&quot;2021-03-27&quot;] (completed)" width="1920"/>
+                <img src="d1b01395c2f5096738b37f86e7525b944877db6a96d593a9359fc9b66237cf69.png" title=" Cesar clicks on Button to search flights" width="1920"/>
+                <img src="2e5ede137fd15c780d5c2ff80b11b5c6ecd4bd47938acbe9b4c82c0635c3733d.png" title=" Cesar clicks on Button to search flights (completed)" width="1920"/>
+                <img src="6146300aa64daa23e4ba1f28476f08f4b0c61c04d34932c5ec424d2f0a1fae04.png" title=" Cesar clicks on  //div[@class=&quot;from-price&quot;][ text() = &quot;COP 140,075&quot;]" width="1920"/>
+                <img src="331c36a8c07ef174bf946d8b2be65b7af51ccdab2cb799ce0943bedcd75b46d0.png" title=" Cesar clicks on  //div[@class=&quot;from-price&quot;][ text() = &quot;COP 140,075&quot;] (completed)" width="1920"/>
+                <img src="331c36a8c07ef174bf946d8b2be65b7af51ccdab2cb799ce0943bedcd75b46d0.png" title=" Cesar clicks on Select the cheaper plan" width="1920"/>
+                <img src="306645cafc27187592b98e6ea0e3f949d9a34d53e7425c4316d1438106d8481b.png" title=" Cesar clicks on Select the cheaper plan (completed)" width="1920"/>
+                <img src="306645cafc27187592b98e6ea0e3f949d9a34d53e7425c4316d1438106d8481b.png" title=" When choose the fly Medellin - Bogota (completed)" width="1920"/>
+                <img src="29a28df2420beffdbbfe13abae7040039abbdcf70531ac11ec043e3819b274e4.png" title=" Then i can see the ticket most economic" width="1920"/>
+                <img src="29a28df2420beffdbbfe13abae7040039abbdcf70531ac11ec043e3819b274e4.png" title=" Then verify cheaper" width="1920"/>
+                <img src="dff08f22115de2c5b7274d0d9ad3fc0f445ec05faf75bb5e0a2759fe95db6e0a.png" title=" Then verify cheaper (completed)" width="1920"/>
+                <img src="dff08f22115de2c5b7274d0d9ad3fc0f445ec05faf75bb5e0a2759fe95db6e0a.png" title=" Then i can see the ticket most economic (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.2</span>
+</div>
+</body>
+</html>
